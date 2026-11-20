@@ -1,369 +1,293 @@
 <!DOCTYPE html>
-<html lang="es" class="scroll-smooth">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>D Helados | Heladería Artesanal</title>
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="icon" type="image/png" href="./public/logo_hela.png" onerror="this.onerror=null; this.src='https://placehold.co/32x32/D92378/ffffff?text=d+helados';">
-    <!-- Google Fonts (Inter & Playfair Display) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,800;1,600&display=swap" rel="stylesheet">
-    <!-- FontAwesome for Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            // Base neutra y superficies (Muros, pisos y vitrinas)
-                            bg: '#FAF8F6',         // Blanco suave principal
-                            bone: '#F4F1EC',       // Blanco cálido / Hueso de paredes
-                            surface: '#F3EEF7',    // Lila muy tenue inspirado en vitrinas
-                            lilac: '#C9B5D6',      // Lila pastel de vitrinas y acentos
-                            greige: '#D6D2CA',     // Gris perla del piso
-                            
-                            // Identidad principal (Logo + Mostrador de caja)
-                            primary: '#4A1B7A',    // Púrpura principal de marca
-                            purpledark: '#3B1469', // Púrpura profundo del logo
-                            counter: '#5B2878',    // Violeta intenso del mostrador
-                            
-                            // Acento vibrante (Logo + Zona trasera)
-                            accent: '#D92378',     // Fucsia / Magenta vibrante
-                            raspberry: '#9C336A',  // Magenta / Frambuesa de pared trasera
-                            
-                            // Acentos secundarios del local (Cielorraso y cajones de luz)
-                            steel: '#7FA1B6',      // Azul acero del cielorraso
-                            pastelpink: '#DE8FA8', // Rosa chicle pastel del cajón de luz
-                            mustard: '#D9C252',    // Amarillo mostaza suave del cajón de luz
-                            cobalt: '#1D428A',     // Azul cobalto trasero
-                            
-                            // Tipografía y carpintería
-                            ink: '#1F1D24',        // Texto principal amable
-                            charcoal: '#232528',   // Negro carbón del mobiliario
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .glass-header {
-            background: rgba(250, 248, 246, 0.92);
-            backdrop-filter: blur(12px);
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>D Helados | Heladería artesanal en Pilar</title>
+<meta name="description" content="Helados artesanales en Pilar: vasos, conos, helados por kilo, milkshakes, paletas y tortas heladas.">
+<link rel="icon" type="image/png" href="./public/logo_hela.png" onerror="this.onerror=null;this.href='https://placehold.co/32x32/D92378/ffffff?text=d';">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,100&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF8F6; --bone:#F4F1EC; --surface:#F3EEF7; --lilac:#C9B5D6; --greige:#D6D2CA;
+  --primary:#4A1B7A; --deep:#3B1469; --counter:#5B2878;
+  --accent:#D92378; --raspberry:#9C336A;
+  --steel:#7FA1B6; --pink:#DE8FA8; --mustard:#D9C252; --cobalt:#1D428A;
+  --ink:#1F1D24;
+  --serif:'Fraunces',Georgia,serif; --sans:'Figtree',system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);font-variation-settings:"SOFT" 100;line-height:1.1}
+
+/* Motivo: cajones de luz del techo */
+.lights{display:flex;height:6px}
+.lights i{flex:1}
+.lights i:nth-child(1){background:var(--steel)}
+.lights i:nth-child(2){background:var(--pink)}
+.lights i:nth-child(3){background:var(--mustard)}
+.lights i:nth-child(4){background:var(--cobalt)}
+.lights i:nth-child(5){background:var(--accent)}
+
+/* Botones */
+.btn{display:inline-flex;align-items:center;gap:8px;font:600 1rem var(--sans);text-decoration:none;padding:13px 26px;border-radius:999px;border:2px solid transparent;transition:background .2s,color .2s,transform .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-accent:hover{background:var(--raspberry)}
+.btn-bone{background:var(--bone);color:var(--primary)}
+.btn-bone:hover{background:var(--mustard);color:var(--deep)}
+.btn-line{border-color:var(--lilac);color:var(--lilac)}
+.btn-line:hover{background:var(--lilac);color:var(--deep)}
+.btn svg{width:20px;height:20px;fill:currentColor}
+
+/* Header */
+header{position:sticky;top:0;z-index:50;background:rgba(250,248,246,.94);backdrop-filter:blur(12px)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px}
+.bar img{height:46px;width:auto;display:block}
+nav ul{display:flex;align-items:center;gap:32px;list-style:none;padding:0}
+nav a{text-decoration:none;font-weight:500;color:rgba(31,29,36,.8);transition:color .2s}
+nav a:hover{color:var(--accent)}
+nav .btn{color:#fff;padding:10px 22px}
+nav .btn:hover{color:#fff}
+.burger{display:none;background:none;border:0;padding:8px;color:var(--primary);cursor:pointer}
+.burger svg{width:28px;height:28px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round}
+
+/* Hero */
+.hero{position:relative;background:radial-gradient(900px 500px at 85% 20%,rgba(156,51,106,.65),transparent 70%),linear-gradient(160deg,var(--deep),var(--primary));color:#fff;padding:72px 0 150px;overflow:hidden}
+.hero::after{content:"";position:absolute;left:-5%;right:-5%;bottom:-1px;height:80px;background:var(--bg);border-radius:50% 50% 0 0/100% 100% 0 0}
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
+.pill{display:inline-block;background:var(--mustard);color:var(--deep);font-weight:700;font-size:.9rem;padding:6px 16px;border-radius:999px;margin-bottom:22px}
+.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:700;letter-spacing:-.02em;max-width:13ch}
+.hero p{font-size:1.15rem;color:rgba(244,241,236,.9);max-width:44ch;margin:22px 0 32px}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px}
+.scoops{position:relative;display:flex;justify-content:center}
+.scoops svg{width:min(380px,80%);height:auto;overflow:visible;filter:drop-shadow(0 24px 30px rgba(20,5,40,.35))}
+.scoop{transform-origin:center bottom;animation:drop .9s cubic-bezier(.3,1.5,.5,1) both}
+.s2{animation-delay:.15s}.s3{animation-delay:.3s}
+@keyframes drop{from{transform:translateY(-90px) scale(.9);opacity:0}to{transform:none;opacity:1}}
+
+/* Secciones */
+section{padding:88px 0}
+.head{max-width:620px;margin-bottom:48px}
+.head h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--primary);letter-spacing:-.015em;margin-bottom:12px}
+.head p{font-size:1.1rem;color:rgba(31,29,36,.75)}
+
+/* Carta */
+#menu{padding-top:40px}
+.menu{display:grid;grid-template-columns:1fr 1fr;column-gap:64px}
+.item{display:grid;grid-template-columns:72px 1fr auto;gap:20px;align-items:start;padding:28px 0;border-bottom:1.5px dashed var(--greige)}
+.ico{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:var(--surface);transition:transform .3s}
+.ico svg{width:38px;height:38px;fill:currentColor}
+.item:hover .ico{transform:rotate(-8deg) scale(1.06)}
+.item h3{font-size:1.3rem;font-weight:650;color:var(--primary);margin-bottom:4px}
+.item p{font-size:.95rem;color:rgba(31,29,36,.72);max-width:38ch}
+.buy{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
+.price{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--counter);white-space:nowrap}
+.order{font-size:.88rem;font-weight:600;text-decoration:none;color:#fff;background:var(--accent);padding:7px 18px;border-radius:999px;transition:background .2s}
+.order:hover{background:var(--raspberry)}
+.order.ask{background:var(--lilac);color:var(--deep)}
+.order.ask:hover{background:var(--primary);color:#fff}
+.c-pink{color:var(--accent);background:#F9DCE6}.c-mus{color:#8A7A14;background:#F6EFC6}.c-steel{color:#4F7389;background:#DCE8EF}
+.c-lilac{color:var(--counter);background:#E8DDF0}.c-rasp{color:var(--raspberry);background:#F1D9E5}.c-cob{color:var(--cobalt);background:#D9E1F1}
+
+/* Ubicación */
+#ubicacion{background:var(--surface)}
+.visit{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:stretch}
+.info{display:grid;gap:36px;align-content:center}
+.info div{display:grid;grid-template-columns:56px 1fr;gap:20px}
+.dot{width:56px;height:56px;border-radius:50%;display:grid;place-items:center}
+.dot svg{width:24px;height:24px;fill:none;stroke:var(--deep);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.info h3{font-size:1.25rem;color:var(--primary);margin-bottom:4px}
+.info p{color:rgba(31,29,36,.8)}
+.info b{color:var(--primary);font-weight:600}
+.counter{background:linear-gradient(170deg,var(--counter),var(--deep));color:#fff;border-radius:28px 28px 28px 140px;padding:48px 40px 48px 56px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+.counter h3{font-size:1.8rem}
+.counter .tel{font-size:1.25rem;font-weight:600;color:var(--mustard)}
+.counter p{color:var(--lilac)}
+.counter .btn{align-self:flex-start;margin-top:10px}
+
+/* Footer */
+footer{background:var(--deep);color:var(--lilac);padding:36px 0}
+footer .wrap{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;justify-content:space-between;font-size:.92rem}
+footer .brand{display:flex;align-items:center;gap:12px;font:700 1.1rem var(--serif);color:#fff}
+footer .brand img{height:32px;background:var(--bone);padding:4px 8px;border-radius:10px}
+footer a{text-decoration:underline;text-underline-offset:3px}
+footer a:hover{color:var(--mustard)}
+
+/* Responsive */
+@media (max-width:860px){
+  .burger{display:block}
+  nav{position:absolute;left:0;right:0;top:100%;background:var(--bone);border-bottom:1px solid var(--lilac);padding:12px 24px 24px;display:none}
+  nav.open{display:block}
+  nav ul{flex-direction:column;align-items:stretch;gap:4px}
+  nav li a{display:block;padding:12px 0}
+  nav .btn{justify-content:center;margin-top:10px}
+  .hero{padding:48px 0 120px}
+  .hero .wrap,.visit,.menu{grid-template-columns:1fr}
+  .scoops{order:-1}.scoops svg{width:min(240px,60%)}
+  section{padding:64px 0}
+  .counter{border-radius:28px 28px 28px 80px;padding:40px 28px 40px 40px}
+}
+@media (max-width:480px){
+  .item{grid-template-columns:56px 1fr;gap:14px}
+  .ico{width:56px;height:56px}.ico svg{width:30px;height:30px}
+  .buy{grid-column:2;flex-direction:row;align-items:center;justify-content:space-between;width:100%}
+}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+footer img {
+  height: 56px;      /* subí o bajá este valor a gusto */
+  width: auto;       /* mantiene la proporción */
+  display: block;
+  background: none;  /* sin fondo */
+}
+</style>
 </head>
-<body class="bg-brand-bg text-brand-ink font-sans antialiased flex flex-col min-h-screen">
+<body>
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-40 w-full glass-header border-b border-brand-lilac/40 transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <img src="./public/logo_hela.png" alt="d helados logo" class="h-12 w-auto object-contain transition-transform group-hover:scale-105" onerror="this.onerror=null; this.src='';">
-                    <span class="font-serif font-bold text-2xl text-brand-primary tracking-wide hidden sm:inline-block">D Helados</span>
-                </a>
+<header>
+  <div class="wrap bar">
+    <a href="#inicio" aria-label="D Helados, inicio"><img src="./public/logo_hela.png" alt="d helados" onerror="this.onerror=null;this.src='https://placehold.co/100x40/D92378/ffffff?text=d+helados';"></a>
+    <button class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false" aria-controls="nav"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    <nav id="nav">
+      <ul>
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#menu">Menú</a></li>
+        <li><a href="#ubicacion">Ubicación y horario</a></li>
+        <li><a href="privacidad.html">Privacidad</a></li>
+        <li><a class="btn btn-accent" href="https://wa.me/595975650919?text=Hola!%20Quiero%20hacer%20un%20pedido%20en%20d%20helados" target="_blank" rel="noopener">Pedir ahora</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+</header>
 
-                <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-8">
-                    <a href="#inicio" class="text-brand-ink/80 hover:text-brand-accent font-medium transition-colors">Inicio</a>
-                    <a href="#menu" class="text-brand-ink/80 hover:text-brand-accent font-medium transition-colors">Menú</a>
-                    <a href="#ubicacion" class="text-brand-ink/80 hover:text-brand-accent font-medium transition-colors">Ubicación y Horario</a>
-                    <a href="privacidad.html" class="text-brand-ink/60 hover:text-brand-primary font-medium text-sm transition-colors">Privacidad</a>
-                    <a href="https://wa.me/595975650919?text=Hola!%20Quiero%20hacer%20un%20pedido%20en%20d%20helados" target="_blank" class="bg-brand-accent hover:bg-brand-raspberry text-white font-semibold px-5 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all flex items-center gap-2">
-                        <i class="fab font-bold fa-whatsapp text-lg"></i> Pedir Ahora
-                    </a>
-                </nav>
-
-                <!-- Mobile Menu Button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" type="button" class="text-brand-primary hover:text-brand-accent focus:outline-none p-2" aria-label="Abrir Menú">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
+<main>
+  <section id="inicio" class="hero" style="padding-bottom:150px">
+    <div class="wrap">
+      <div>
+        <span class="pill">Helados artesanales</span>
+        <h1>El dulce sabor de los mejores momentos</h1>
+        <p>Disfrutá nuestros helados con el toque artesanal que nos caracteriza. Vasos, conos, paletas, batidos y tortas heladas.</p>
+        <div class="actions">
+          <a class="btn btn-accent" href="#menu">Explorar menú</a>
+          <a class="btn btn-line" href="#ubicacion">Ver ubicación</a>
         </div>
+      </div>
+      <div class="scoops" aria-hidden="true">
+        <svg viewBox="0 0 300 380">
+          <path d="M80 190h140L150 365z" fill="#D9C252"/>
+          <path d="M98 190l52 160M130 190l20 170M170 190l-20 170M202 190l-52 160M90 235h120M108 285h84" stroke="#B8A23A" stroke-width="3" fill="none"/>
+          <g class="scoop s1"><circle cx="150" cy="170" r="72" fill="#C9B5D6"/><path d="M82 188q68 36 136 0 4 18-8 30-52 24-120 0-14-12-8-30z" fill="#C9B5D6"/><circle cx="125" cy="150" r="14" fill="#fff" opacity=".35"/></g>
+          <g class="scoop s2"><circle cx="150" cy="105" r="66" fill="#DE8FA8"/><path d="M90 120q60 32 120 0 6 14-6 26-48 22-108 0-14-10-6-26z" fill="#D9798F" opacity=".0"/><circle cx="128" cy="85" r="12" fill="#fff" opacity=".4"/></g>
+          <g class="scoop s3"><circle cx="150" cy="52" r="46" fill="#D92378"/><circle cx="135" cy="40" r="9" fill="#fff" opacity=".4"/><circle cx="150" cy="4" r="9" fill="#D9C252"/></g>
+        </svg>
+      </div>
+    </div>
+  </section>
 
-        <!-- Mobile Navigation Drawer -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-brand-lilac/40 px-4 pt-2 pb-6 space-y-3 shadow-lg">
-            <a href="#inicio" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ink hover:text-brand-accent hover:bg-brand-surface">Inicio</a>
-            <a href="#menu" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ink hover:text-brand-accent hover:bg-brand-surface">Menú</a>
-            <a href="#ubicacion" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ink hover:text-brand-accent hover:bg-brand-surface">Ubicación y Horario</a>
-            <a href="privacidad.html" class="mobile-link block px-3 py-2 rounded-md text-base font-medium text-brand-ink/70 hover:text-brand-primary hover:bg-brand-surface">Política de Privacidad</a>
-            <a href="https://wa.me/595975650919?text=Hola!%20Quiero%20hacer%20un%20pedido%20en%20d%20helados" target="_blank" class="w-full text-center bg-brand-accent text-white font-semibold px-4 py-3 rounded-full shadow block mt-4">
-                <i class="fab fa-whatsapp text-lg mr-2"></i> Pedir por WhatsApp
-            </a>
+  <section id="menu">
+    <div class="wrap">
+      <div class="head">
+        <h2>Nuestro menú</h2>
+        <p>Preparados con dedicación para deleitar tu paladar. Elegí tu favorito o combinalos como quieras.</p>
+      </div>
+      <div class="menu">
+
+        <article class="item">
+          <div class="ico c-pink"><svg viewBox="0 0 24 24"><path d="M12 3.5c-2.6 0-4.8 1.8-5.3 4.3-.4.1-.7.4-.7.9 0 .6.4 1 1 1h10c.6 0 1-.4 1-1 0-.5-.3-.8-.7-.9-.5-2.5-2.7-4.3-5.3-4.3z"/><path d="M6.8 11.5l1.3 7.3c.2.9 1 1.7 2 1.7h3.8c1 0 1.8-.8 2-1.7l1.3-7.3H6.8z"/></svg></div>
+          <div><h3>Helado en vaso</h3><p>Elegí tus sabores preferidos: chocolate amargo, vainilla, frutilla, dulce de leche y más.</p></div>
+          <div class="buy"><span class="price">Desde Gs. 8.000</span><a class="order" href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20un%20Helado%20en%20Vaso" target="_blank" rel="noopener">Pedir</a></div>
+        </article>
+
+        <article class="item">
+          <div class="ico c-mus"><svg viewBox="0 0 24 24"><circle cx="12" cy="7.5" r="5"/><path d="M7.4 11.5h9.2L12 22.5z" opacity=".65"/></svg></div>
+          <div><h3>Conos artesanales</h3><p>Cucuruchos crujientes y riquísimos, elaborados en casa.</p></div>
+          <div class="buy"><span class="price">Desde Gs. 8.000</span><a class="order" href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20un%20Cono" target="_blank" rel="noopener">Pedir</a></div>
+        </article>
+
+        <article class="item">
+          <div class="ico c-steel"><svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="4" rx="1.2"/><path d="M4.8 10.5h14.4l-1.1 8.2c-.1.9-.9 1.6-1.8 1.6H7.7c-.9 0-1.7-.7-1.8-1.6z"/></svg></div>
+          <div><h3>Helados por kilo</h3><p>Envases térmicos para llevar la frescura de D Helados a tu casa o reunión familiar.</p></div>
+          <div class="buy"><span class="price">Desde Gs. 22.000</span><a class="order" href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20Potes%20de%20Helado" target="_blank" rel="noopener">Pedir</a></div>
+        </article>
+
+        <article class="item">
+          <div class="ico c-lilac"><svg viewBox="0 0 24 24"><path d="M12.8 2.5l1.2.5-1.5 4.2h5.2l-1.3 12.6c-.1.9-.9 1.7-1.9 1.7H9.5c-1 0-1.8-.8-1.9-1.7L6.3 7.7h4.4z"/></svg></div>
+          <div><h3>Milkshakes y shake-cola</h3><p>Batidos cremosos preparados al instante con tus sabores de helado y toppings favoritos.</p></div>
+          <div class="buy"><span class="price">Desde Gs. 22.000</span><a class="order" href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20un%20Milkshake" target="_blank" rel="noopener">Pedir</a></div>
+        </article>
+
+        <article class="item">
+          <div class="ico c-rasp"><svg viewBox="0 0 24 24"><path d="M12 2C8.7 2 6 4.7 6 8v6.5c0 .8.7 1.5 1.5 1.5h9c.8 0 1.5-.7 1.5-1.5V8c0-3.3-2.7-6-6-6z"/><path d="M10.5 17h3v3.5c0 .8-.7 1.5-1.5 1.5s-1.5-.7-1.5-1.5z" opacity=".65"/></svg></div>
+          <div><h3>Paletas y palitos</h3><p>Paletas de diferentes sabores, como Oreo, dulce de leche, menta granizada y muchos más.</p></div>
+          <div class="buy"><span class="price">Desde Gs. 8.000</span><a class="order" href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20Paletas" target="_blank" rel="noopener">Pedir</a></div>
+        </article>
+
+        <article class="item">
+          <div class="ico c-cob"><svg viewBox="0 0 24 24"><path d="M12 2.5c.8 1 .8 1.9 0 2.6-.8-.7-.8-1.6 0-2.6z"/><path d="M4 12.5c0-1.1.9-2 2-2h12c1.1 0 2 .9 2 2v1.6c-1 .9-2 .9-3 0-1-.9-2-.9-3 0-1 .9-2 .9-3 0-1-.9-2-.9-3 0-1 .9-2 .9-3 0z" opacity=".7"/><path d="M4 16c1 .8 2 .8 3 0 1-.8 2-.8 3 0 1 .8 2 .8 3 0 1-.8 2-.8 3 0 1 .8 2 .8 3 0v2.5c0 1.1-.9 2-2 2H6c-1.1 0-2-.9-2-2z"/><rect x="11.2" y="5.2" width="1.6" height="5"/></svg></div>
+          <div><h3>Postres y tortas heladas</h3><p>Creaciones ideales para celebraciones especiales y eventos.</p></div>
+          <div class="buy"><span class="price">Consultar</span><a class="order ask" href="https://wa.me/595975650919?text=Hola,%20quisiera%20consultar%20por%20Postres%20Helados" target="_blank" rel="noopener">Consultar</a></div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="ubicacion">
+    <div class="wrap">
+      <div class="head">
+        <h2>Visitanos o escribinos</h2>
+        <p>Te esperamos con la mejor atención y los mejores helados de la ciudad.</p>
+      </div>
+      <div class="visit">
+        <div class="info">
+          <div>
+            <span class="dot" style="background:var(--pink)"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
+            <span><h3>Dirección</h3><p>Calle 8 de Diciembre casi Avenida Irala<br>Barrio 8 de Diciembre<br>Pilar, Paraguay</p></span>
+          </div>
+          <div>
+            <span class="dot" style="background:var(--mustard)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <span><h3>Horario de atención</h3><p><b>Lunes a sábado:</b> 12:00 a 23:00<br><b>Domingos:</b> 13:00 a 22:00</p></span>
+          </div>
         </div>
-    </header>
-
-    <!-- Main Content -->
-    <main class="flex-grow">
-        <!-- Hero Section -->
-        <section id="inicio" class="relative overflow-hidden bg-gradient-to-b from-brand-surface via-brand-bone/60 to-brand-bg py-16 md:py-24">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-12 items-center">
-                    <!-- Text Side -->
-                    <div class="text-center md:text-left space-y-6">
-                        <span class="inline-flex items-center gap-2 bg-brand-mustard/25 text-brand-primary border border-brand-mustard/50 font-semibold px-4 py-1.5 rounded-full text-sm tracking-wide">
-                            <span class="w-2 h-2 rounded-full bg-brand-accent"></span>
-                            Helados Artesanales
-                        </span>
-                        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-brand-primary leading-tight">
-                            El dulce sabor de los mejores momentos en <span class="text-brand-accent">D Helados</span>
-                        </h1>
-                        <p class="text-lg text-brand-ink/75 max-w-xl mx-auto md:mx-0">
-                            Disfruta de nuestros helados con el toque artesanal único que nos caracteriza.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-2">
-                            <a href="#menu" class="bg-brand-accent hover:bg-brand-raspberry text-white font-bold px-8 py-3.5 rounded-full shadow-lg hover:shadow-xl transition-all text-center">
-                                Explorar Menú
-                            </a>
-                            <a href="#ubicacion" class="bg-white text-brand-primary border-2 border-brand-primary/20 hover:border-brand-primary font-bold px-8 py-3.5 rounded-full shadow-sm hover:bg-brand-surface transition-all text-center">
-                                Ver Ubicación
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Image / Brand Visual (Inspirado en los cajones de luz pastel y azul acero del salón) -->
-                    <div class="flex justify-center items-center">
-                        <div class="relative w-full max-w-md">
-                            <!-- Destellos de los cajones de luz del techo: Rosa pastel, Azul acero y Amarillo mostaza -->
-                            <div class="absolute -top-6 -left-6 w-64 h-64 bg-brand-pastelpink/40 rounded-full mix-blend-multiply filter blur-2xl opacity-80 animate-pulse"></div>
-                            <div class="absolute -bottom-6 -right-4 w-64 h-64 bg-brand-steel/40 rounded-full mix-blend-multiply filter blur-2xl opacity-80"></div>
-                            <div class="absolute top-1/2 -right-6 w-40 h-40 bg-brand-mustard/35 rounded-full mix-blend-multiply filter blur-xl opacity-80"></div>
-                            
-                            <div class="relative bg-white/90 backdrop-blur-md p-8 rounded-3xl shadow-xl border border-brand-lilac/50 text-center">
-                                <img src="./public/logo_hela.png" alt="d helados" class="w-48 mx-auto mb-6 drop-shadow-md" onerror="this.onerror=null; this.src='https://placehold.co/300x300/4A1B7A/ffffff?text=d+helados';">
-                                <h3 class="font-serif font-bold text-2xl text-brand-primary mb-2">¡Sabor y Calidad Garantizados!</h3>
-                                <p class="text-brand-ink/70 text-sm">Prueba nuestras paletas, conos artesanales, batidos y más.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Menu / Products Section -->
-        <section id="menu" class="py-16 md:py-24 bg-white border-t border-brand-greige/40">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-12">
-                    <span class="text-xs font-bold uppercase tracking-widest text-brand-steel">Carta de Sabores</span>
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-primary mt-1 mb-4">Nuestro Menú</h2>
-                    <p class="text-brand-ink/75 text-lg">Preparados con dedicación para deleitar tu paladar. Elige tu favorito o combínalos como quieras.</p>
-                </div>
-
-                <!-- Product Grid (Superficies lila tenue #F3EEF7 inspiradas en vitrinas + acentos del local) -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Producto 1 -->
-                    <div class="bg-brand-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lilac/50 flex flex-col group">
-                        <div class="h-48 overflow-hidden bg-gradient-to-br from-brand-pastelpink/30 to-brand-lilac/40 flex items-center justify-center p-4">
-                            <i class="fas fa-ice-cream text-7xl text-brand-accent group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between bg-white/60">
-                            <div>
-                                <span class="inline-block bg-brand-pastelpink/25 text-brand-raspberry text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Cuchareable</span>
-                                <h3 class="font-serif text-xl font-bold text-brand-primary mt-2 mb-2">Helado en Vaso</h3>
-                                <p class="text-brand-ink/75 text-sm mb-4">Elige tus sabores preferidos: Chocolate amargo, Vainilla, Frutilla, Dulce de leche y más.</p>
-                            </div>
-                            <div class="flex items-center justify-between border-t border-brand-lilac/40 pt-4 mt-2">
-                                <span class="font-bold text-lg text-brand-primary">Desde Gs.8.000</span>
-                                <a href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20un%20Helado%20en%20Vaso" target="_blank" class="bg-brand-accent hover:bg-brand-raspberry text-white text-sm px-4 py-2 rounded-full font-semibold transition-colors shadow-sm">Pedir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 2 -->
-                    <div class="bg-brand-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lilac/50 flex flex-col group">
-                        <div class="h-48 overflow-hidden bg-gradient-to-br from-brand-mustard/25 to-brand-bone flex items-center justify-center p-4">
-                            <i class="fas fa-stroopwafel text-7xl text-brand-primary group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between bg-white/60">
-                            <div>
-                                <span class="inline-block bg-brand-mustard/30 text-brand-ink text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Crujiente</span>
-                                <h3 class="font-serif text-xl font-bold text-brand-primary mt-2 mb-2">Conos Artesanales</h3>
-                                <p class="text-brand-ink/75 text-sm mb-4">Cucuruchos crujientes y riquísimos, elaborados en casa.</p>
-                            </div>
-                            <div class="flex items-center justify-between border-t border-brand-lilac/40 pt-4 mt-2">
-                                <span class="font-bold text-lg text-brand-primary">Desde Gs.8.000</span>
-                                <a href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20un%20Cono" target="_blank" class="bg-brand-accent hover:bg-brand-raspberry text-white text-sm px-4 py-2 rounded-full font-semibold transition-colors shadow-sm">Pedir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 3 -->
-                    <div class="bg-brand-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lilac/50 flex flex-col group">
-                        <div class="h-48 overflow-hidden bg-gradient-to-br from-brand-steel/25 to-brand-surface flex items-center justify-center p-4">
-                            <i class="fas fa-box text-7xl text-brand-steel group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between bg-white/60">
-                            <div>
-                                <span class="inline-block bg-brand-steel/25 text-brand-cobalt text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Para Compartir</span>
-                                <h3 class="font-serif text-xl font-bold text-brand-primary mt-2 mb-2">Helados por kilo</h3>
-                                <p class="text-brand-ink/75 text-sm mb-4">Envases térmicos para llevar la frescura de D Helados a tu casa o reunión familiar.</p>
-                            </div>
-                            <div class="flex items-center justify-between border-t border-brand-lilac/40 pt-4 mt-2">
-                                <span class="font-bold text-lg text-brand-primary">Desde Gs.22.000</span>
-                                <a href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20Potes%20de%20Helado" target="_blank" class="bg-brand-accent hover:bg-brand-raspberry text-white text-sm px-4 py-2 rounded-full font-semibold transition-colors shadow-sm">Pedir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 4 -->
-                    <div class="bg-brand-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lilac/50 flex flex-col group">
-                        <div class="h-48 overflow-hidden bg-gradient-to-br from-brand-steel/20 to-brand-pastelpink/25 flex items-center justify-center p-4">
-                            <i class="fas fa-glass-whiskey text-7xl text-brand-accent group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between bg-white/60">
-                            <div>
-                                <span class="inline-block bg-brand-steel/25 text-brand-cobalt text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Bebidas</span>
-                                <h3 class="font-serif text-xl font-bold text-brand-primary mt-2 mb-2">Milkshakes & Shake-Cola</h3>
-                                <p class="text-brand-ink/75 text-sm mb-4">Batidos cremosos preparados al instante con tus sabores de helado y toppings favoritos.</p>
-                            </div>
-                            <div class="flex items-center justify-between border-t border-brand-lilac/40 pt-4 mt-2">
-                                <span class="font-bold text-lg text-brand-primary">Desde Gs.22.000</span>
-                                <a href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20un%20Milkshake" target="_blank" class="bg-brand-accent hover:bg-brand-raspberry text-white text-sm px-4 py-2 rounded-full font-semibold transition-colors shadow-sm">Pedir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 5 -->
-                    <div class="bg-brand-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lilac/50 flex flex-col group">
-                        <div class="h-48 overflow-hidden bg-gradient-to-br from-brand-lilac/35 to-brand-pastelpink/30 flex items-center justify-center p-4">
-                            <i class="fas fa-cookie-bite text-7xl text-brand-primary group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between bg-white/60">
-                            <div>
-                                <span class="inline-block bg-brand-pastelpink/25 text-brand-raspberry text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Especiales</span>
-                                <h3 class="font-serif text-xl font-bold text-brand-primary mt-2 mb-2">Paletas y Palitos</h3>
-                                <p class="text-brand-ink/75 text-sm mb-4">Paletas de diferentes sabores, como Oreo, Dulce de leche, Menta granizada y muchos más.</p>
-                            </div>
-                            <div class="flex items-center justify-between border-t border-brand-lilac/40 pt-4 mt-2">
-                                <span class="font-bold text-lg text-brand-primary">Desde Gs.8.000</span>
-                                <a href="https://wa.me/595975650919?text=Hola,%20quisiera%20pedir%20Paletas" target="_blank" class="bg-brand-accent hover:bg-brand-raspberry text-white text-sm px-4 py-2 rounded-full font-semibold transition-colors shadow-sm">Pedir</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Producto 6 -->
-                    <div class="bg-brand-surface rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-brand-lilac/50 flex flex-col group">
-                        <div class="h-48 overflow-hidden bg-gradient-to-br from-brand-mustard/25 to-brand-pastelpink/25 flex items-center justify-center p-4">
-                            <i class="fas fa-birthday-cake text-7xl text-brand-raspberry group-hover:scale-110 transition-transform duration-300"></i>
-                        </div>
-                        <div class="p-6 flex-grow flex flex-col justify-between bg-white/60">
-                            <div>
-                                <span class="inline-block bg-brand-mustard/30 text-brand-ink text-xs font-bold px-2.5 py-0.5 rounded-full tracking-wider uppercase">Postres</span>
-                                <h3 class="font-serif text-xl font-bold text-brand-primary mt-2 mb-2">Postres & Tortas Heladas</h3>
-                                <p class="text-brand-ink/75 text-sm mb-4">Creaciones ideales para celebraciones especiales y eventos.</p>
-                            </div>
-                            <div class="flex items-center justify-between border-t border-brand-lilac/40 pt-4 mt-2">
-                                <span class="font-bold text-lg text-brand-primary">Consultar</span>
-                                <a href="https://wa.me/595975650919?text=Hola,%20quisiera%20consultar%20por%20Postres%20Helados" target="_blank" class="bg-brand-primary hover:bg-brand-counter text-white text-sm px-4 py-2 rounded-full font-semibold transition-colors shadow-sm">Consultar</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Location, Hours & Contact Section (Inspirado en el mostrador de caja púrpura intenso #4A1B7A / #5B2878) -->
-        <section id="ubicacion" class="py-16 md:py-24 bg-brand-primary text-white relative overflow-hidden">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center max-w-2xl mx-auto mb-16">
-                    <h2 class="font-serif text-3xl sm:text-4xl font-bold text-brand-bone mb-4">Visítanos o Contáctanos</h2>
-                    <p class="text-brand-lilac">Estamos esperándote para ofrecerte la mejor atención y los mejores helados de la ciudad.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8 text-center">
-                    <!-- Card 1: Dirección -->
-                    <div class="bg-brand-counter/70 backdrop-blur border border-brand-lilac/25 rounded-2xl p-8 flex flex-col items-center shadow-lg">
-                        <div class="w-16 h-16 bg-brand-pastelpink rounded-full flex items-center justify-center text-2xl mb-6 shadow-md">
-                            <i class="fas fa-map-marker-alt text-brand-purpledark"></i>
-                        </div>
-                        <h3 class="font-serif font-bold text-xl mb-3 text-brand-bone">Dirección</h3>
-                        <p class="text-brand-surface/90 leading-relaxed">
-                            Calle 8 de diciembre casi Avenida Irala<br>
-                            Barrio 8 de diciembre<br>
-                            Pilar, Paraguay
-                        </p>
-                    </div>
-
-                    <!-- Card 2: Horarios -->
-                    <div class="bg-brand-counter/70 backdrop-blur border border-brand-lilac/25 rounded-2xl p-8 flex flex-col items-center shadow-lg">
-                        <div class="w-16 h-16 bg-brand-mustard rounded-full flex items-center justify-center text-2xl mb-6 shadow-md">
-                            <i class="fas fa-clock text-brand-purpledark"></i>
-                        </div>
-                        <h3 class="font-serif font-bold text-xl mb-3 text-brand-bone">Horario de Atención</h3>
-                        <p class="text-brand-surface/90 leading-relaxed">
-                            <strong class="text-white">Lunes a Sábados:</strong> 12:00 - 23:00<br>
-                            <strong class="text-white">Domingos:</strong> 13:00 - 22:00
-                        </p>
-                    </div>
-
-                    <!-- Card 3: Teléfono / WhatsApp -->
-                    <div class="bg-brand-counter/70 backdrop-blur border border-brand-lilac/25 rounded-2xl p-8 flex flex-col items-center shadow-lg">
-                        <div class="w-16 h-16 bg-brand-steel rounded-full flex items-center justify-center text-2xl mb-6 shadow-md">
-                            <i class="fas fa-phone-alt text-white"></i>
-                        </div>
-                        <h3 class="font-serif font-bold text-xl mb-3 text-brand-bone">Teléfono & Delivery</h3>
-                        <p class="text-brand-surface/90 mb-4">+595 975 650 919</p>
-                        <a href="https://wa.me/595975650919?text=Hola!%20Tengo%20una%20consulta" target="_blank" class="inline-flex items-center gap-2 bg-brand-accent hover:bg-brand-raspberry text-white font-semibold px-5 py-2.5 rounded-full shadow transition-all">
-                            <i class="fab fa-whatsapp text-lg"></i> Chatear por WhatsApp
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer (Púrpura profundo del logo #3B1469) -->
-    <footer class="bg-brand-purpledark text-brand-lilac/80 py-10 border-t border-brand-counter">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:flex sm:justify-between sm:items-center">
-            <div class="flex items-center justify-center sm:justify-start gap-3 mb-4 sm:mb-0">
-                <img src="./public/logo_hela.png" alt="d helados" class="h-8 w-auto brightness-200" onerror="this.onerror=null; this.src='https://placehold.co/100x40/D92378/ffffff?text=d+helados';">
-                <span class="text-white font-serif font-bold text-lg">D Helados</span>
-            </div>
-            
-            <p class="text-sm">
-                &copy; <span id="year"></span> D Helados. Todos los derechos reservados.
-            </p>
-
-            <div class="mt-4 sm:mt-0 space-x-4 text-sm">
-                <a href="privacidad.html" class="hover:text-brand-mustard transition-colors underline">
-                    Política de Privacidad
-                </a>
-            </div>
+        <div class="counter">
+          <h3>Pedí por WhatsApp</h3>
+          <span class="tel">+595 975 650 919</span>
+          <p>Hacé tu pedido o consultanos por delivery, tortas y eventos.</p>
+          <a class="btn btn-accent" href="https://wa.me/595975650919?text=Hola!%20Tengo%20una%20consulta" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2zm5.3 14.2c-.2.6-1.300 1.200-1.800 1.200-.5.100-1 .2-3.300-.7-2.800-1.100-4.600-4-4.700-4.200-.1-.2-1.100-1.500-1.100-2.800s.7-2 1-2.300c.2-.3.500-.3.700-.3h.5c.2 0 .4 0 .6.500l.8 2c.1.200.1.400 0 .5l-.4.600c-.1.200-.3.300-.1.600.2.300.8 1.300 1.700 2.100 1.100 1 2.100 1.300 2.400 1.400.3.100.5.100.6-.1l.9-1.100c.2-.3.400-.2.700-.1l1.900.9c.3.100.5.200.5.300.1.200.1.800-.1 1.400z"/></svg>Chatear por WhatsApp</a>
         </div>
-    </footer>
+      </div>
+    </div>
+  </section>
+</main>
 
-    <!-- JavaScript Script -->
-    <script>
-        // Set dynamic year in footer
-        document.getElementById('year').textContent = new Date().getFullYear();
+<div class="lights" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></div>
+<footer>
+  <div class="wrap">
+    <span></span><img src="./public/logo_hela.png" alt="" onerror="this.onerror=null;this.src='https://placehold.co/100x40/D92378/ffffff?text=d+helados';"></span>
+    <span>&copy; <span id="year"></span> D Helados. Todos los derechos reservados.</span>
+    <a href="privacidad.html">Política de privacidad</a>
+  </div>
+</footer>
 
-        // Mobile Menu Toggle Logic
-        const btn = document.getElementById('mobile-menu-btn');
-        const menu = document.getElementById('mobile-menu');
-        const mobileLinks = document.querySelectorAll('.mobile-link');
-
-        btn.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-        });
-
-        mobileLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                menu.classList.add('hidden');
-            });
-        });
-    </script>
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+const burger = document.getElementById('burger'), nav = document.getElementById('nav');
+burger.addEventListener('click', () => {
+  const open = nav.classList.toggle('open');
+  burger.setAttribute('aria-expanded', open);
+});
+nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  nav.classList.remove('open'); burger.setAttribute('aria-expanded', 'false');
+}));
+</script>
 </body>
 </html>
