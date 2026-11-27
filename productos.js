@@ -160,7 +160,7 @@ const PRODUCTOS = [
     categoria: 'conos',
     nombre: 'Conos, Capelinas y Cubanitos',
     descripcion: 'Conos, capelinas y cubanitos vacíos para llevar. Precios por unidad.',
-    precio: 1000,
+    precio: 0,
     foto: '',
     opciones: [
       { titulo: 'Tipo', tipo: 'unico', items: [
