@@ -151,7 +151,7 @@ const PRODUCTOS = [
     id: 'vasito-diet',
     categoria: 'conos',
     nombre: 'Vasito diet',
-    descripcion: 'Helado sin azúcar agregado. Consultá los sabores diet del día.',
+    descripcion: 'Helado sin azúcar agregado. Consultá los sabores diet disponibles.',
     precio: 22000,
     foto: ''
   },
@@ -179,7 +179,7 @@ const PRODUCTOS = [
     id: 'pote',
     categoria: 'kilo',
     nombre: 'Helado por kilo',
-    descripcion: 'Envase térmico para llevar a casa o compartir en reuniones.',
+    descripcion: 'Envase térmico para llevar a casa o compartir.',
     precio: 0,
     foto: './public/productos/kilo.jpg',
     etiqueta: 'Para compartir',
