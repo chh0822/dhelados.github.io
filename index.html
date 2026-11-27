@@ -51,7 +51,6 @@ h1,h2,h3{font-family:var(--serif);line-height:1.12}
 /* Header */
 header{position:sticky;top:0;z-index:50;background:rgba(244,241,236,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--greige)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:76px}
-.bar img{height:46px;width:auto;display:block}
 nav ul{display:flex;align-items:center;gap:32px;list-style:none;padding:0}
 nav a{text-decoration:none;font-weight:500;color:rgba(31,29,36,.8);transition:color .2s}
 nav a:hover{color:var(--accent)}
@@ -158,35 +157,14 @@ footer a:hover{color:var(--mustard)}
 }
 @media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 
-.bar img, 
-footer img {
-  height: 56px;
-  width: auto;
-  display: block;
-  background: none;
-}
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-  color: inherit;          /* o el color de tu paleta, ej. var(--carbon) */
-}
-.brand img {
-  height: 44px;
-  width: auto;
-  display: block;
-}
-.brand-name {
-  font-weight: 700;
-  font-size: 1.25rem;
-  letter-spacing: .01em;
-  line-height: 1;
-  white-space: nowrap;
-}
-@media (max-width: 420px) {
-  .brand-name { font-size: 1.05rem; }   /* para que quepa junto al botón del menú */
-}
+/* Marca del header: logo + nombre */
+.brand{display:inline-flex;align-items:center;gap:12px;text-decoration:none;color:var(--primary)}
+.brand img{height:48px;width:auto;display:block}
+.brand-name{font:700 1.4rem/1 var(--serif);letter-spacing:-.01em;white-space:nowrap;transition:color .2s}
+.brand:hover .brand-name{color:var(--accent)}
+footer img{height:56px;width:auto;display:block;background:none}
+@media (max-width:1000px){nav ul{gap:20px}}
+@media (max-width:420px){.brand{gap:8px}.brand img{height:40px}.brand-name{font-size:1.15rem}}
 </style>
 </head>
 <body>
