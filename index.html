@@ -165,6 +165,28 @@ footer img {
   display: block;
   background: none;
 }
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: inherit;          /* o el color de tu paleta, ej. var(--carbon) */
+}
+.brand img {
+  height: 44px;
+  width: auto;
+  display: block;
+}
+.brand-name {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: .01em;
+  line-height: 1;
+  white-space: nowrap;
+}
+@media (max-width: 420px) {
+  .brand-name { font-size: 1.05rem; }   /* para que quepa junto al botón del menú */
+}
 </style>
 </head>
 <body>
