@@ -156,13 +156,19 @@ const PRODUCTOS = [
     foto: ''
   },
   {
-    id: 'conos-por-unidad',
+    id: 'cucuruchos-por-unidad',
     categoria: 'conos',
-    nombre: 'Conos Vacíos',
-    descripcion: 'Conos vacíos para llevar. Precio por unidad.',
+    nombre: 'Conos, Capelinas y Cubanitos',
+    descripcion: 'Conos, capelinas y cubanitos vacíos para llevar. Precios por unidad.',
     precio: 1000,
-    foto: ''
-  },
+    foto: '',
+    opciones: [
+      { titulo: 'Tipo', tipo: 'unico', items: [
+        { nombre: 'Cono',    precio: 1000 },
+        { nombre: 'Capelina',  precio: 2000 },
+        { nombre: 'Cubanitos',  precio: 1000 }
+      ]}]
+    },
 
   /* ---------- SOMBRERITOS ---------- */
   {
