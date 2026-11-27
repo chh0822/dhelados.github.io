@@ -8,7 +8,7 @@
 <link rel="icon" type="image/png" href="./public/logo_hela.png" onerror="this.onerror=null;this.href='https://placehold.co/32x32/D92378/ffffff?text=d';">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,500..800,100&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#FAF8F6; --bone:#F4F1EC; --surface:#F3EEF7; --lilac:#C9B5D6; --greige:#D6D2CA;
@@ -16,7 +16,7 @@
   --accent:#D92378; --raspberry:#9C336A;
   --steel:#7FA1B6; --pink:#DE8FA8; --mustard:#D9C252; --cobalt:#1D428A;
   --ink:#1F1D24;
-  --serif:'Fraunces',Georgia,serif; --sans:'Figtree',system-ui,sans-serif;
+  --serif:'Lora',Georgia,serif; --sans:'Plus Jakarta Sans',system-ui,sans-serif;
   --logo-h: 56px;
 }
 *{box-sizing:border-box;margin:0}
@@ -26,7 +26,7 @@ img{max-width:100%}
 a{color:inherit}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1120px;margin:0 auto;padding:0 24px}
-h1,h2,h3{font-family:var(--serif);font-variation-settings:"SOFT" 100;line-height:1.1}
+h1,h2,h3{font-family:var(--serif);line-height:1.12}
 
 /* Motivo: cajones de luz del techo */
 .lights{display:flex;height:6px}
@@ -49,7 +49,7 @@ h1,h2,h3{font-family:var(--serif);font-variation-settings:"SOFT" 100;line-height
 .btn svg{width:20px;height:20px;fill:currentColor}
 
 /* Header */
-header{position:sticky;top:0;z-index:50;background:rgba(250,248,246,.94);backdrop-filter:blur(12px)}
+header{position:sticky;top:0;z-index:50;background:rgba(244,241,236,.95);backdrop-filter:blur(12px);border-bottom:1px solid var(--greige)}
 .bar{display:flex;align-items:center;justify-content:space-between;height:76px}
 .bar img{height:46px;width:auto;display:block}
 nav ul{display:flex;align-items:center;gap:32px;list-style:none;padding:0}
@@ -65,20 +65,28 @@ nav .btn:hover{color:#fff}
 .hero::after{content:"";position:absolute;left:-5%;right:-5%;bottom:-1px;height:80px;background:var(--bg);border-radius:50% 50% 0 0/100% 100% 0 0}
 .hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
 .pill{display:inline-block;background:var(--mustard);color:var(--deep);font-weight:700;font-size:.9rem;padding:6px 16px;border-radius:999px;margin-bottom:22px}
-.hero h1{font-size:clamp(2.5rem,5.6vw,4.4rem);font-weight:700;letter-spacing:-.02em;max-width:13ch}
-.hero p{font-size:1.15rem;color:rgba(244,241,236,.9);max-width:44ch;margin:22px 0 32px}
+.hero h1{font-size:clamp(2.45rem,5.4vw,4.2rem);font-weight:700;letter-spacing:-.02em;max-width:14ch}
+.hero h1 em{font-style:italic;color:var(--pink);font-weight:500}
+.hero p{font-size:1.12rem;color:rgba(244,241,236,.9);max-width:44ch;margin:22px 0 32px}
 .hero .actions{display:flex;flex-wrap:wrap;gap:14px}
-.scoops{position:relative;display:flex;justify-content:center}
-.scoops svg{width:min(380px,80%);height:auto;overflow:visible;filter:drop-shadow(0 24px 30px rgba(20,5,40,.35))}
-.scoop{transform-origin:center bottom;animation:drop .9s cubic-bezier(.3,1.5,.5,1) both}
-.s2{animation-delay:.15s}.s3{animation-delay:.3s}
-@keyframes drop{from{transform:translateY(-90px) scale(.9);opacity:0}to{transform:none;opacity:1}}
+
+.hero-photo{position:relative;display:flex;justify-content:center}
+.hero-photo img{
+  width:min(390px,100%);
+  aspect-ratio:4 / 5;
+  object-fit:cover;
+  border-radius:28px;
+  border:3px solid rgba(201,181,214,.35);
+  box-shadow:0 24px 42px rgba(20,5,40,.42);
+  background:var(--counter);
+  display:block;
+}
 
 /* Secciones */
 section{padding:88px 0}
 .head{max-width:620px;margin-bottom:48px}
 .head h2{font-size:clamp(2rem,4vw,3rem);font-weight:700;color:var(--primary);letter-spacing:-.015em;margin-bottom:12px}
-.head p{font-size:1.1rem;color:rgba(31,29,36,.75)}
+.head p{font-size:1.08rem;color:rgba(31,29,36,.75)}
 
 /* Carta */
 #menu{padding-top:40px}
@@ -87,7 +95,7 @@ section{padding:88px 0}
 .ico{width:72px;height:72px;border-radius:50%;display:grid;place-items:center;background:var(--surface);transition:transform .3s}
 .ico svg{width:38px;height:38px;fill:currentColor}
 .item:hover .ico{transform:rotate(-8deg) scale(1.06)}
-.item h3{font-size:1.3rem;font-weight:650;color:var(--primary);margin-bottom:4px}
+.item h3{font-size:1.28rem;font-weight:600;color:var(--primary);margin-bottom:4px}
 .item p{font-size:.95rem;color:rgba(31,29,36,.72);max-width:38ch}
 .buy{text-align:right;display:flex;flex-direction:column;align-items:flex-end;gap:10px}
 .price{font-family:var(--serif);font-weight:700;font-size:1.1rem;color:var(--counter);white-space:nowrap}
@@ -97,6 +105,12 @@ section{padding:88px 0}
 .order.ask:hover{background:var(--primary);color:#fff}
 .c-pink{color:var(--accent);background:#F9DCE6}.c-mus{color:#8A7A14;background:#F6EFC6}.c-steel{color:#4F7389;background:#DCE8EF}
 .c-lilac{color:var(--counter);background:#E8DDF0}.c-rasp{color:var(--raspberry);background:#F1D9E5}.c-cob{color:var(--cobalt);background:#D9E1F1}
+.menu-more{margin-top:32px}
+
+/* Enlaces editoriales (menú completo y Google Maps) */
+.text-link{display:inline-flex;align-items:center;gap:6px;margin-top:10px;font-size:.95rem;font-weight:600;color:var(--primary);text-decoration:none;border-bottom:1.5px solid var(--accent);padding-bottom:2px;transition:color .2s,border-color .2s}
+.text-link:hover{color:var(--accent);border-color:var(--primary)}
+.text-link svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
 
 /* Ubicación */
 #ubicacion{background:var(--surface)}
@@ -109,8 +123,8 @@ section{padding:88px 0}
 .info p{color:rgba(31,29,36,.8)}
 .info b{color:var(--primary);font-weight:600}
 .counter{background:linear-gradient(170deg,var(--counter),var(--deep));color:#fff;border-radius:28px 28px 28px 140px;padding:48px 40px 48px 56px;display:flex;flex-direction:column;justify-content:center;gap:14px}
-.counter h3{font-size:1.8rem}
-.counter .tel{font-size:1.25rem;font-weight:600;color:var(--mustard)}
+.counter h3{font-size:1.78rem}
+.counter .tel{font-size:1.22rem;font-weight:600;color:var(--mustard)}
 .counter p{color:var(--lilac)}
 .counter .btn{align-self:flex-start;margin-top:10px}
 
@@ -132,7 +146,8 @@ footer a:hover{color:var(--mustard)}
   nav .btn{justify-content:center;margin-top:10px}
   .hero{padding:48px 0 120px}
   .hero .wrap,.visit,.menu{grid-template-columns:1fr}
-  .scoops{order:-1}.scoops svg{width:min(240px,60%)}
+  .hero-photo{order:-1}
+  .hero-photo img{width:min(320px,88%);aspect-ratio:1 / 1}
   section{padding:64px 0}
   .counter{border-radius:28px 28px 28px 80px;padding:40px 28px 40px 40px}
 }
@@ -145,12 +160,11 @@ footer a:hover{color:var(--mustard)}
 
 .bar img, 
 footer img {
-  height: 56px;      /* subí o bajá este valor a gusto */
-  width: auto;       /* mantiene la proporción */
+  height: 56px;
+  width: auto;
   display: block;
-  background: none;  /* sin fondo */
+  background: none;
 }
-
 </style>
 </head>
 <body>
@@ -176,23 +190,17 @@ footer img {
   <section id="inicio" class="hero" style="padding-bottom:150px">
     <div class="wrap">
       <div>
-        <span class="pill">Helados artesanales</span>
-        <h1>El dulce sabor de los mejores momentos</h1>
-        <p>Disfrutá nuestros helados con el toque artesanal que nos caracteriza. Vasos, conos, paletas, batidos y tortas heladas.</p>
+        <span class="pill">Heladería artesanal en Pilar</span>
+        <h1>Helados hechos artesanalmente y con <em>buen gusto</em></h1>
+        <p>Pasá a elegir tus sabores en el local o pedí para llevar a casa: vasos, conos, potes por kilo, batidos y tortas heladas.</p>
         <div class="actions">
-          <a class="btn btn-accent" href="#menu">Explorar menú</a>
-          <a class="btn btn-line" href="#ubicacion">Ver ubicación</a>
+          <a class="btn btn-accent" href="#menu">Ver el menú</a>
+          <a class="btn btn-line" href="#ubicacion">Cómo llegar</a>
         </div>
       </div>
-      <div class="scoops" aria-hidden="true">
-        <svg viewBox="0 0 300 380">
-          <path d="M80 190h140L150 365z" fill="#D9C252"/>
-          <path d="M98 190l52 160M130 190l20 170M170 190l-20 170M202 190l-52 160M90 235h120M108 285h84" stroke="#B8A23A" stroke-width="3" fill="none"/>
-          <g class="scoop s1"><circle cx="150" cy="170" r="72" fill="#C9B5D6"/><path d="M82 188q68 36 136 0 4 18-8 30-52 24-120 0-14-12-8-30z" fill="#C9B5D6"/><circle cx="125" cy="150" r="14" fill="#fff" opacity=".35"/></g>
-          <g class="scoop s2"><circle cx="150" cy="105" r="66" fill="#DE8FA8"/><path d="M90 120q60 32 120 0 6 14-6 26-48 22-108 0-14-10-6-26z" fill="#D9798F" opacity=".0"/><circle cx="128" cy="85" r="12" fill="#fff" opacity=".4"/></g>
-          <g class="scoop s3"><circle cx="150" cy="52" r="46" fill="#D92378"/><circle cx="135" cy="40" r="9" fill="#fff" opacity=".4"/><circle cx="150" cy="4" r="9" fill="#D9C252"/></g>
-        </svg>
-      </div>
+      <figure class="hero-photo">
+        <img src="./public/hero_helado.png" alt="Helados artesanales de D Helados" onerror="this.onerror=null;this.src='https://placehold.co/600x750/5B2878/F4F1EC?text=Foto+D+Helados';">
+      </figure>
     </div>
   </section>
 
@@ -241,6 +249,12 @@ footer img {
         </article>
 
       </div>
+      <div class="menu-more">
+        <a class="text-link" href="menu.html">
+          Ver carta completa de sabores y precios
+          <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+        </a>
+      </div>
     </div>
   </section>
 
@@ -254,7 +268,14 @@ footer img {
         <div class="info">
           <div>
             <span class="dot" style="background:var(--pink)"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11.5A7 7 0 0 0 5 9.5C5 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg></span>
-            <span><h3>Dirección</h3><p>Calle 8 de Diciembre casi Avenida Irala<br>Barrio 8 de Diciembre<br>Pilar, Paraguay</p></span>
+            <span>
+              <h3>Dirección</h3>
+              <p>Calle 8 de Diciembre casi Avenida Irala<br>Barrio 8 de Diciembre<br>Pilar, Paraguay</p>
+              <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=D+Helados+8+de+Diciembre+Pilar+Paraguay" target="_blank" rel="noopener">
+                Ver en Google Maps
+                <svg viewBox="0 0 24 24"><path d="M7 17L17 7M17 7H8M17 7v9"/></svg>
+              </a>
+            </span>
           </div>
           <div>
             <span class="dot" style="background:var(--mustard)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
@@ -294,4 +315,3 @@ nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
 </script>
 </body>
 </html>
-
