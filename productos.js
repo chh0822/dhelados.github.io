@@ -72,11 +72,11 @@ const TIENDA = {
 const SABORES = {
   // Sabores de helado de vitrina (vasitos, conos, kilo, sombreritos, milkshakes)
   helados: [
-    'Dulce de leche D Helados', 'Dulce de leche granizado', 'Dulce de leche con brownie',
-    'Chocolate amargo', 'Chocolate con almendras', 'Chocolate blanco', 'Chocolate suizo',
-    'Oreo', 'Menta granizada', 'Vainilla artesanal', 'Crema americana', 'Tramontana',
-    'Sambayón', 'Banana split', 'Frutilla a la crema',
-    'Frutilla al agua', 'Limón', 'Maracuyá', 'Mango', 'Ananá', 'Durazno'
+    'Dulce de leche Micro', 'Dulce de leche Tentación', 'Durazno', 'Chocolate Grampiamonte', 'Chocopop', 'Dulce de Leche Clásico', 'Dulce de Leche Brownie', 'Dulce de Leche Granizado',
+    'Frutilla a la crema', 'Flan', 'Frutos del Bosque', 'Granizado', 'Chocolate Amargo', 'Chocolate c/Almendras', 'Chocolate c/Avellanas', 'Chocolate Micro',
+    'Limón', 'Leche Condensada', 'Leche condensada c/Brownie y Nutella', '4 Leches', 'Menta Granizada', 'Coco', 'Chocolate Clásico', 'Chocolate Blanco',
+    'Menta Clásica', 'Mburukuja', 'Unicornio', 'Americana c/Nutella', 'Banana Split', 'Bombón', 'Crema con Almendras', 'Cereza', 'Coco Split',
+    'Oreo', 'Pavé', 'Piña', 'Portuguesa', 'Pie de Limón', 'Tramontana', 'Vainilla', 'Amarena', 'Americana', 'Americana c/Brownie'
   ],
   alfajores: ['Chocolate', 'Americana', 'Dulce de leche', '4 leches'],
   tortas: ['Frutilla', 'Frutichoco', 'Oreo', 'Tramontana', 'Pavé', 'Chocolate', 'Dulce de leche', 'Chocobomba', 'Almendras'],
