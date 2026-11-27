@@ -155,6 +155,14 @@ const PRODUCTOS = [
     precio: 22000,
     foto: ''
   },
+  {
+    id: 'conos-por-unidad',
+    categoria: 'conos',
+    nombre: 'Conos Vacíos',
+    descripcion: 'Conos vacíos para llevar. Precio por unidad.',
+    precio: 1000,
+    foto: ''
+  },
 
   /* ---------- SOMBRERITOS ---------- */
   {
