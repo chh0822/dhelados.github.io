@@ -233,7 +233,7 @@ const PRODUCTOS = [
     id: 'acai',
     categoria: 'acai',
     nombre: 'Camadinha de açaí',
-    descripcion: 'Capas de açaí bien frío. ¡Agregale los toppings que más te gusten!',
+    descripcion: 'Helado de açaí bien frío. ¡Agregale los toppings que más te gusten!',
     precio: 0,
     foto: './public/productos/acai.jpg',
     opciones: [
