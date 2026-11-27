@@ -153,7 +153,7 @@ const PRODUCTOS = [
     nombre: 'Vasito diet',
     descripcion: 'Helado sin azúcar agregado. Consultá los sabores diet disponibles.',
     precio: 22000,
-    foto: ''
+    foto: './public/productos/vasito-diet.jpg'
   },
   {
     id: 'cucuruchos-por-unidad',
