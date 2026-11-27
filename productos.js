@@ -159,7 +159,7 @@ const PRODUCTOS = [
     id: 'cucuruchos-por-unidad',
     categoria: 'conos',
     nombre: 'Conos, Capelinas y Cubanitos',
-    descripcion: 'Conos, capelinas y cubanitos vacíos para llevar. Precios por unidad.',
+    descripcion: 'Conos, capelinas y cubanitos vacíos artesanales para llevar. Precios por unidad.',
     precio: 0,
     foto: './public/productos/conos-vacios.jpg',
     opciones: [
@@ -175,7 +175,7 @@ const PRODUCTOS = [
     id: 'sombrerito',
     categoria: 'sombreritos',
     nombre: 'Sombrerito',
-    descripcion: 'Canastita de barquillo con bochas de helado, salsa y su barquillo.',
+    descripcion: 'Canastita de barquillo con bochas de helado, chocolate caliente y su cubanito.',
     precio: 0,
     foto: './public/productos/sombreritos.jpg',
     destacado: true,
