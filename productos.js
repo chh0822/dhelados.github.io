@@ -210,7 +210,7 @@ const PRODUCTOS = [
     nombre: 'Milkshake',
     descripcion: 'Batido cremoso preparado al instante. ¡Agregale los toppings que más te gusten!',
     precio: 0,
-    foto: './public/productos/milkshake.jpg',
+    foto: './public/productos/milkshake.png',
     destacado: true,
     opciones: [
       { titulo: 'Tamaño', tipo: 'unico', items: [
